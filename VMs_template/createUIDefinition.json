@@ -82,6 +82,36 @@
                         "visible": true
                     },
                     {
+                        "name": "OSVersion2",
+                        "type": "Microsoft.Common.DropDown",
+                        "label": "Windows OS Version",
+                        "defaultValue": "2019",
+                        "toolTip": "The OS Version for the VM Image",
+                        "constraints": {
+                            "allowedValues": [
+                                {
+                                    "value": {
+                                        "publisher": "MicrosoftWindowsServer",
+                                        "offer": "WindowsServer",
+                                        "sku": "2012-Datacenter",
+                                        "version": "latest"
+                                    },
+                                    "label": "2012-Datacenter"
+                                },
+                                {
+                                    "value": "2016",
+                                    "label": "2016-Datacenter"
+                                },
+                                {
+                                    "value": "2019",
+                                    "label": "2019-Datacenter"
+                                }
+                            ],
+                            "required": true
+                        },
+                        "visible": true
+                    },
+                    {
                         "name": "vmSize",
                         "type": "Microsoft.Compute.SizeSelector",
                         "label": "Virtual machine size",
@@ -263,17 +293,18 @@
             "virtualMachineName": "[basics('vmName')]",
             "virtualMachineSize": "[steps('VirtualMachineConfig').vmSize]",
             "osversion": "[steps('VirtualMachineConfig').OSVersion]",
+            "osversion2": "[steps('VirtualMachineConfig').OSVersion2]",
             "adminUsername": "[basics('adminUsername')]",
             "adminPassword": "[basics('password')]",
-			"osDiskType": "[steps('VirtualMachineConfig').OSdisktype]",
-			"deployPublicIpAddress": "[steps('VirtualMachineConfig').sectionNetworking.PublicIPDropdown]", 
-			"networkResourceGroup": "[steps('VirtualMachineConfig').vnet.resourceGroup]",
-			"vnetName": "[steps('VirtualMachineConfig').vnet.name]",
-			"subnetName": "[steps('VirtualMachineConfig').vnet.subnets.subnet.name]",
-			"atosmananged": "[steps('VirtualMachineConfig').AtosManageDropdown]",
-			"atosantimalware": "[steps('VirtualMachineConfig').AtosAntimalwaredropdown]",
-			"atosbackup": "[steps('VirtualMachineConfig').AtosBackupBox]",
-			"atospatchingschedule": "[steps('VirtualMachineConfig').AtosPatchingBox]"
+            "osDiskType": "[steps('VirtualMachineConfig').OSdisktype]",
+            "deployPublicIpAddress": "[steps('VirtualMachineConfig').sectionNetworking.PublicIPDropdown]",
+            "networkResourceGroup": "[steps('VirtualMachineConfig').vnet.resourceGroup]",
+            "vnetName": "[steps('VirtualMachineConfig').vnet.name]",
+            "subnetName": "[steps('VirtualMachineConfig').vnet.subnets.subnet.name]",
+            "atosmananged": "[steps('VirtualMachineConfig').AtosManageDropdown]",
+            "atosantimalware": "[steps('VirtualMachineConfig').AtosAntimalwaredropdown]",
+            "atosbackup": "[steps('VirtualMachineConfig').AtosBackupBox]",
+            "atospatchingschedule": "[steps('VirtualMachineConfig').AtosPatchingBox]"
         }
     }
 }

@@ -23,6 +23,13 @@
                 "description": "Version of Windows to deploy: 2012, 2016, 2019"
             }
         },
+        "osversion2": {
+            "type": "string",
+            "defaultValue": "2019",
+            "metadata": {
+                "description": "Version of Windows to deploy: 2012, 2016, 2019"
+            }
+        },
         "adminUsername": {
             "type": "string",
             "defaultValue": "AzureUser",
@@ -223,6 +230,10 @@
         "VMSize": {
             "type": "string",
             "value": "[parameters('virtualMachineSize')]"
+        },
+        "osversion2": {
+            "type": "string",
+            "value": "[parameters('osversion2')]"
         }
     }
 }
