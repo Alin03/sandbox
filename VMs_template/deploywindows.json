@@ -18,16 +18,9 @@
         },
         "osversion": {
             "type": "string",
-            "defaultValue": "2019",
+            "defaultValue": "Windows Server 2019 Datacenter",
             "metadata": {
-                "description": "Version of Windows to deploy: 2012, 2016, 2019"
-            }
-        },
-        "osversion2": {
-            "type": "object",
-            "defaultValue": "2019",
-            "metadata": {
-                "description": "Version of Windows to deploy: 2012, 2016, 2019"
+                "description": "Version of Operating System"
             }
         },
         "adminUsername": {
@@ -193,7 +186,7 @@
                     "vmSize": "[parameters('virtualMachineSize')]"
                 },
                 "storageProfile": {
-                    "imageReference": "[parameters('osversion2')]",
+                    "imageReference": "[parameters('osversion')]",
                     "osDisk": {
                         "name": "[concat(parameters('virtualMachineName'),'-osdisk')]",
                         "createOption": "fromImage",
@@ -226,9 +219,9 @@
             "type": "string",
             "value": "[parameters('virtualMachineSize')]"
         },
-        "osversion2": {
+        "osversion": {
             "type": "object",
-            "value": "[parameters('osversion2')]"
+            "value": "[parameters('osversion')]"
         }
     }
 }

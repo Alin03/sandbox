@@ -59,33 +59,8 @@
                     {
                         "name": "OSVersion",
                         "type": "Microsoft.Common.DropDown",
-                        "label": "Windows OS Version",
-                        "defaultValue": "2019",
-                        "toolTip": "The OS Version for the VM Image",
-                        "constraints": {
-                            "allowedValues": [
-                                {
-                                    "value": "2012",
-                                    "label": "2012-Datacenter"
-                                },
-                                {
-                                    "value": "2016",
-                                    "label": "2016-Datacenter"
-                                },
-                                {
-                                    "value": "2019",
-                                    "label": "2019-Datacenter"
-                                }
-                            ],
-                            "required": true
-                        },
-                        "visible": true
-                    },
-                    {
-                        "name": "OSVersion2",
-                        "type": "Microsoft.Common.DropDown",
-                        "label": "Windows OS Version",
-                        "defaultValue": "2019",
+                        "label": "Operating System Version",
+                        "defaultValue": "Windows Server 2019 Datacenter",
                         "toolTip": "The OS Version for the VM Image",
                         "constraints": {
                             "allowedValues": [
@@ -120,10 +95,73 @@
                                     "value": {
                                         "publisher": "RedHat",
                                         "offer": "RHEL",
-                                        "sku": "7.8",
+                                        "sku": "6.10",
                                         "version": "latest"
                                     },
-                                    "label": "Linux RedHat 7.8"
+                                    "label": "Linux RedHat 6.10"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "RedHat",
+                                        "offer": "RHEL",
+                                        "sku": "7_9",
+                                        "version": "latest"
+                                    },
+                                    "label": "Linux RedHat 7.9"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "RedHat",
+                                        "offer": "RHEL",
+                                        "sku": "8_3",
+                                        "version": "latest"
+                                    },
+                                    "label": "Linux RedHat 8.3"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "suse",
+                                        "offer": "sles-12-sp5",
+                                        "sku": "gen1",
+                                        "version": "latest"
+                                    },
+                                    "label": "Linux Suse 12 SP5"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "suse",
+                                        "offer": "sles-15-sp2",
+                                        "sku": "gen1",
+                                        "version": "latest"
+                                    },
+                                    "label": "Linux Suse 15 SP2"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "Canonical",
+                                        "offer": "ubuntuserver",
+                                        "sku": "14.04.5-LTS",
+                                        "version": "latest"
+                                    },
+                                    "label": "Linux Ubunutu 14.04 LTS"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "Canonical",
+                                        "offer": "ubuntuserver",
+                                        "sku": "16.04.0-LTS",
+                                        "version": "latest"
+                                    },
+                                    "label": "Linux Ubunutu 16.04 LTS"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "Canonical",
+                                        "offer": "ubuntuserver",
+                                        "sku": "18.04-LTS",
+                                        "version": "latest"
+                                    },
+                                    "label": "Linux Ubunutu 18.04 LTS"
                                 }
                             ],
                             "required": true
@@ -312,7 +350,6 @@
             "virtualMachineName": "[basics('vmName')]",
             "virtualMachineSize": "[steps('VirtualMachineConfig').vmSize]",
             "osversion": "[steps('VirtualMachineConfig').OSVersion]",
-            "osversion2": "[steps('VirtualMachineConfig').OSVersion2]",
             "adminUsername": "[basics('adminUsername')]",
             "adminPassword": "[basics('password')]",
             "osDiskType": "[steps('VirtualMachineConfig').OSdisktype]",
