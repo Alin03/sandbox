@@ -96,15 +96,34 @@
                                         "sku": "2012-Datacenter",
                                         "version": "latest"
                                     },
-                                    "label": "2012-Datacenter"
+                                    "label": "Windows Server 2012 Datacenter"
                                 },
                                 {
-                                    "value": "2016",
-                                    "label": "2016-Datacenter"
+                                    "value": {
+                                        "publisher": "MicrosoftWindowsServer",
+                                        "offer": "WindowsServer",
+                                        "sku": "2016-Datacenter",
+                                        "version": "latest"
+                                    },
+                                    "label": "Windows Server 2016 Datacenter"
                                 },
                                 {
-                                    "value": "2019",
-                                    "label": "2019-Datacenter"
+                                    "value": {
+                                        "publisher": "MicrosoftWindowsServer",
+                                        "offer": "WindowsServer",
+                                        "sku": "2019-Datacenter",
+                                        "version": "latest"
+                                    },
+                                    "label": "Windows Server 2019 Datacenter"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "RedHat",
+                                        "offer": "RHEL",
+                                        "sku": "7.8",
+                                        "version": "latest"
+                                    },
+                                    "label": "Linux RedHat 7.8"
                                 }
                             ],
                             "required": true

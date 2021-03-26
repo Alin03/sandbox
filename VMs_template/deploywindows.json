@@ -193,12 +193,7 @@
                     "vmSize": "[parameters('virtualMachineSize')]"
                 },
                 "storageProfile": {
-                    "imageReference": {
-                        "publisher": "MicrosoftWindowsServer",
-                        "offer": "WindowsServer",
-                        "sku": "[variables('osversion')]",
-                        "version": "latest"
-                    },
+                    "imageReference": "[parameters('osversion2')]",
                     "osDisk": {
                         "name": "[concat(parameters('virtualMachineName'),'-osdisk')]",
                         "createOption": "fromImage",
