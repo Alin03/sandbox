@@ -7,7 +7,7 @@
             {
                 "name": "vmName",
                 "type": "Microsoft.Common.TextBox",
-                "label": "virtual Machine Name",
+                "label": "Virtual Machine Name",
                 "toolTip": "The name of the Virtual Machine.",
                 "defaultValue": "VMtest",
                 "constraints": {
