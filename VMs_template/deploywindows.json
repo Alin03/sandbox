@@ -17,7 +17,7 @@
             }
         },
         "osversion": {
-            "type": "string",
+            "type": "object",
             "defaultValue": "Windows Server 2019 Datacenter",
             "metadata": {
                 "description": "Version of Operating System"
