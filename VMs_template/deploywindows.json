@@ -120,7 +120,6 @@
     },
     "variables": {
         "location": "[resourceGroup().location]",
-        "osversion": "[concat(parameters('osversion'),'-Datacenter')]",
         "vnetId": "[resourceId(parameters('networkResourceGroup'), 'Microsoft.Network/virtualNetworks', parameters('vnetName'))]",
         "subnetRef": "[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]",
         "networkInterfaceName": "[concat(parameters('virtualMachineName'), '-nic0')]",
