@@ -119,7 +119,7 @@
                         "visible": true
                     },
                     {
-                        "name": "sectionNetworking1",
+                        "name": "sectionNetworking",
                         "type": "Microsoft.Common.Section",
                         "label": "Public IP Address",
                         "elements": [
@@ -266,7 +266,7 @@
             "adminUsername": "[basics('adminUsername')]",
             "adminPassword": "[basics('password')]",
 			"osDiskType": "[steps('VirtualMachineConfig').OSdisktype]",
-			"deployPublicIpAddress": "[steps('VirtualMachineConfig').PublicIPDropdown]", 
+			"deployPublicIpAddress": "[steps('VirtualMachineConfig').sectionNetworking.PublicIPDropdown]", 
 			"networkResourceGroup": "[steps('VirtualMachineConfig').vnet.resourceGroup]",
 			"vnetName": "[steps('VirtualMachineConfig').vnet.name]",
 			"subnetName": "[steps('VirtualMachineConfig').vnet.subnets.subnet.name]",
