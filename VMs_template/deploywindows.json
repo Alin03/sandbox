@@ -24,7 +24,7 @@
             }
         },
         "osversion2": {
-            "type": "string",
+            "type": "array",
             "defaultValue": "2019",
             "metadata": {
                 "description": "Version of Windows to deploy: 2012, 2016, 2019"
@@ -232,7 +232,7 @@
             "value": "[parameters('virtualMachineSize')]"
         },
         "osversion2": {
-            "type": "string",
+            "type": "array",
             "value": "[parameters('osversion2')]"
         }
     }
