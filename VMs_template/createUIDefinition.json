@@ -197,7 +197,7 @@
                                     "value": "Standard_LRS"
                                 },
                                 {
-                                    "label": "Premium SSD",
+                                    "label": "Premium SSD (only for supported VM sizes)",
                                     "value": "Premium_LRS"
                                 }
                             ],
@@ -319,9 +319,9 @@
                                     "value": "False"
                                 }
                             ],
-                            "required": true
+                            "required": false
                         },
-                        "visible": true
+                        "visible": "[equals(steps('vmManagement').AtosManageDropdown, 'True')]"
                     },
                     {
                         "name": "AtosBackupBox",
@@ -330,8 +330,9 @@
                         "toolTip": "The name of backup schedule policy for Virtual Machine",
                         "defaultValue": "no-backup",
                         "constraints": {
-                            "required": true
-                        }
+                            "required": false
+                        },
+                        "visible": "[equals(steps('vmManagement').AtosManageDropdown, 'True')]"
                     },
                     {
                         "name": "AtosPatchingBox",
@@ -340,8 +341,9 @@
                         "toolTip": "The name of patching schedule for Virtual Machine",
                         "defaultValue": "no-patching",
                         "constraints": {
-                            "required": true
-                        }
+                            "required": false
+                        },
+                        "visible": "[equals(steps('vmManagement').AtosManageDropdown, 'True')]"
                     }
                 ]
             }
