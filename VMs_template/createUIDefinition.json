@@ -140,15 +140,6 @@
                                     "value": {
                                         "publisher": "Canonical",
                                         "offer": "ubuntuserver",
-                                        "sku": "14.04.5-LTS",
-                                        "version": "latest"
-                                    },
-                                    "label": "Linux Ubunutu 14.04 LTS"
-                                },
-                                {
-                                    "value": {
-                                        "publisher": "Canonical",
-                                        "offer": "ubuntuserver",
                                         "sku": "16.04.0-LTS",
                                         "version": "latest"
                                     },
@@ -162,6 +153,123 @@
                                         "version": "latest"
                                     },
                                     "label": "Linux Ubunutu 18.04 LTS"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "center-for-internet-security-inc",
+                                        "offer": "cis-windows-server-2012-v2-0-1-l1",
+                                        "sku": "cis-ws2012-l1",
+                                        "version": "latest"
+                                    },
+                                    "label": "CIS Level 1 Windows Server 2012 Datacenter"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "center-for-internet-security-inc",
+                                        "offer": "cis-windows-server-2012-v2-0-1-l2",
+                                        "sku": "cis-ws2012-l2",
+                                        "version": "latest"
+                                    },
+                                    "label": "CIS Level 2 Windows Server 2012 Datacenter"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "center-for-internet-security-inc",
+                                        "offer": "cis-windows-server-2016-v1-0-0-l1",
+                                        "sku": "cis-ws2016-l1",
+                                        "version": "latest"
+                                    },
+                                    "label": "CIS Level 1 Windows Server 2016 Datacenter"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "center-for-internet-security-inc",
+                                        "offer": "cis-windows-server-2016-v1-0-0-l2",
+                                        "sku": "cis-ws2016-l2",
+                                        "version": "latest"
+                                    },
+                                    "label": "CIS Level 2 Windows Server 2016 Datacenter"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "center-for-internet-security-inc",
+                                        "offer": "cis-windows-server-2019-v1-0-0-l1",
+                                        "sku": "cis-ws2019-l1",
+                                        "version": "latest"
+                                    },
+                                    "label": "CIS Level 1 Windows Server 2019 Datacenter"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "center-for-internet-security-inc",
+                                        "offer": "cis-windows-server-2019-v1-0-0-l2",
+                                        "sku": "cis-ws2019-l2",
+                                        "version": "latest"
+                                    },
+                                    "label": "CIS Level 2 Windows Server 2019 Datacenter"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "center-for-internet-security-inc",
+                                        "offer": "cis-rhel-7-v2-2-0-l1",
+                                        "sku": "cis-rhel7-l1",
+                                        "version": "latest"
+                                    },
+                                    "label": "CIS Level 1 Linux RedHat 7"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "center-for-internet-security-inc",
+                                        "offer": "cis-rhel-7-l2",
+                                        "sku": "cis-rhel7-l2",
+                                        "version": "latest"
+                                    },
+                                    "label": "CIS Level 2 Linux RedHat 7"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "center-for-internet-security-inc",
+                                        "offer": "cis-rhel-8-l1",
+                                        "sku": "cis-rhel-8-l1",
+                                        "version": "latest"
+                                    },
+                                    "label": "CIS Level 1 Linux RedHat 8"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "center-for-internet-security-inc",
+                                        "offer": "cis-suse-linux-12-v2-0-0-l1",
+                                        "sku": "cis-suse12-l1",
+                                        "version": "latest"
+                                    },
+                                    "label": "CIS Level 1 Linux Suse 12 SP5"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "center-for-internet-security-inc",
+                                        "offer": "cis-suse15-l1",
+                                        "sku": "cis-suse15-l1",
+                                        "version": "latest"
+                                    },
+                                    "label": "CIS Level 1 Linux Suse 15 SP2"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "center-for-internet-security-inc",
+                                        "offer": "cis-ubuntu-linux-1604-v1-0-0-l1",
+                                        "sku": "cis-ubuntu1604-l1",
+                                        "version": "latest"
+                                    },
+                                    "label": "CIS Level 1 Linux Ubunutu 16.04 LTS"
+                                },
+                                {
+                                    "value": {
+                                        "publisher": "center-for-internet-security-inc",
+                                        "offer": "cis-ubuntu-linux-1804-l1",
+                                        "sku": "cis-ubuntu1804-l1",
+                                        "version": "latest"
+                                    },
+                                    "label": "CIS Level 1 Linux Ubunutu 18.04 LTS"
                                 }
                             ],
                             "required": true
@@ -206,36 +314,6 @@
                         "visible": true
                     },
                     {
-                        "name": "sectionNetworking",
-                        "type": "Microsoft.Common.Section",
-                        "label": "Public IP Address",
-                        "elements": [
-                            {
-                                "name": "PublicIPDropdown",
-                                "type": "Microsoft.Common.DropDown",
-                                "label": "Public IP",
-                                "placeholder": "",
-                                "defaultValue": "False",
-                                "toolTip": "",
-                                "constraints": {
-                                    "allowedValues": [
-                                        {
-                                            "label": "True",
-                                            "value": "True"
-                                        },
-                                        {
-                                            "label": "False",
-                                            "value": "False"
-                                        }
-                                    ],
-                                    "required": true
-                                },
-                                "visible": true
-                            }
-                        ],
-                        "visible": true
-                    },
-                    {
                         "name": "vnet",
                         "type": "Microsoft.Network.VirtualNetworkCombo",
                         "label": {
@@ -251,7 +329,7 @@
                             "addressPrefixSize": "/16"
                         },
                         "constraints": {
-                            "minAddressPrefixSize": "/16"
+                            "minAddressPrefixSize": "/24"
                         },
                         "options": {
                             "hideExisting": false
@@ -264,7 +342,7 @@
                                     "addressPrefixSize": "/24"
                                 },
                                 "constraints": {
-                                    "minAddressPrefixSize": "/24",
+                                    "minAddressPrefixSize": "/26",
                                     "minAddressCount": 12,
                                     "requireContiguousAddresses": true
                                 }
