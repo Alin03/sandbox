@@ -103,6 +103,17 @@
                 "description": "Deploy Antimalware agent on VM: true or false"
             }
         },
+        "atoscompliance": {
+            "type": "string",
+            "defaultValue": "False",
+            "allowedValues": [
+                "True",
+                "False"
+            ],
+            "metadata": {
+                "description": "Deploy Qualys agent on VM: true or false"
+            }
+        },
         "atosbackup": {
             "type": "string",
             "defaultValue": "no-backup",
@@ -177,6 +188,7 @@
             "tags": {
                 "AtosManaged": "[parameters('atosmanaged')]",
                 "AtosAntimalware": "[parameters('atosantimalware')]",
+                "AtosCompliance": "[parameters('atoscompliance')]",
                 "AtosBackup": "[parameters('atosbackup')]",
                 "AtosPatching": "[parameters('atospatchingschedule')]"
             },

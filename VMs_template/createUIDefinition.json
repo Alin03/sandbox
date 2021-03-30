@@ -405,6 +405,28 @@
                         "visible": "[equals(steps('vmManagement').AtosManageDropdown, 'True')]"
                     },
                     {
+                        "name": "AtosAtosCompliancedropdown",
+                        "type": "Microsoft.Common.DropDown",
+                        "label": "Atos Compliance",
+                        "placeholder": "",
+                        "defaultValue": "True",
+                        "toolTip": "",
+                        "constraints": {
+                            "allowedValues": [
+                                {
+                                    "label": "True",
+                                    "value": "True"
+                                },
+                                {
+                                    "label": "False",
+                                    "value": "False"
+                                }
+                            ],
+                            "required": false
+                        },
+                        "visible": "[equals(steps('vmManagement').AtosManageDropdown, 'True')]"
+                    },
+                    {
                         "name": "AtosBackupBox",
                         "type": "Microsoft.Common.TextBox",
                         "label": "Backup policy schedule",
@@ -442,6 +464,7 @@
             "subnetName": "[steps('VirtualMachineConfig').vnet.subnets.subnet.name]",
             "atosmanaged": "[steps('vmManagement').AtosManageDropdown]",
             "atosantimalware": "[steps('vmManagement').AtosAntimalwaredropdown]",
+            "atoscompliance": "[steps('vmManagement').AtosCompliancedropdown]",
             "atosbackup": "[steps('vmManagement').AtosBackupBox]",
             "atospatchingschedule": "[steps('vmManagement').AtosPatchingBox]"
         }
