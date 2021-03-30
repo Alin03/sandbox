@@ -81,7 +81,7 @@
                 "description": "The name of the subnet in the virtual network."
             }
         },
-        "atosmananged": {
+        "atosmanaged": {
             "type": "string",
             "defaultValue": "true",
             "allowedValues": [
@@ -175,7 +175,7 @@
                 "[resourceId('Microsoft.Network/networkInterfaces/', variables('networkInterfaceName'))]"
             ],
             "tags": {
-                "AtosManaged": "[parameters('atosmananged')]",
+                "AtosManaged": "[parameters('atosmanaged')]",
                 "AtosAntimalware": "[parameters('atosantimalware')]",
                 "AtosBackup": "[parameters('atosbackup')]",
                 "AtosPatching": "[parameters('atospatchingschedule')]"
