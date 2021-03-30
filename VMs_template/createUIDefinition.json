@@ -293,23 +293,19 @@
                         "label": "OS Disk Type",
                         "placeholder": "",
                         "defaultValue": "StandardSSD_LRS",
-                        "defaultDescription": "A value for selection",
                         "toolTip": "",
                         "constraints": {
                             "allowedValues": [
                                 {
                                     "label": "Standard HDD",
-                                    "description": "Available only for VMs SKU which supports Premium Disk",
                                     "value": "Standard_LRS"
                                 },
                                 {
                                     "label": "Standard SDD",
-                                    "description": "Available only for VMs SKU which supports Premium Disk",
                                     "value": "StandardSSD_LRS"
                                 },
                                 {
                                     "label": "Premium SSD (only for supported VM sizes)",
-                                    "description": "Available only for VMs SKU which supports Premium Disk",
                                     "value": "Premium_LRS"
                                 }
                             ],
