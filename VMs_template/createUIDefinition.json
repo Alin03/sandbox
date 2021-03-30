@@ -298,10 +298,12 @@
                             "allowedValues": [
                                 {
                                     "label": "Standard HDD",
+                                    "description": "Available only for VMs SKU which supports Premium Disk",
                                     "value": "Standard_LRS"
                                 },
                                 {
                                     "label": "Standard SDD",
+                                    "description": "Available only for VMs SKU which supports Premium Disk",
                                     "value": "StandardSSD_LRS"
                                 },
                                 {
