@@ -297,12 +297,12 @@
                         "constraints": {
                             "allowedValues": [
                                 {
-                                    "label": "Standard SSD",
-                                    "value": "StandardSSD_LRS"
-                                },
-                                {
                                     "label": "Standard HDD",
                                     "value": "Standard_LRS"
+                                },
+                                {
+                                    "label": "Standard SDD",
+                                    "value": "StandardSSD_LRS"
                                 },
                                 {
                                     "label": "Premium SSD (only for supported VM sizes)",
@@ -437,10 +437,10 @@
             "networkResourceGroup": "[steps('VirtualMachineConfig').vnet.resourceGroup]",
             "vnetName": "[steps('VirtualMachineConfig').vnet.name]",
             "subnetName": "[steps('VirtualMachineConfig').vnet.subnets.subnet.name]",
-            "atosmanaged": "[steps('VirtualMachineConfig').AtosManageDropdown]",
-            "atosantimalware": "[steps('VirtualMachineConfig').AtosAntimalwaredropdown]",
-            "atosbackup": "[steps('VirtualMachineConfig').AtosBackupBox]",
-            "atospatchingschedule": "[steps('VirtualMachineConfig').AtosPatchingBox]"
+            "atosmanaged": "[steps('vmManagement').AtosManageDropdown]",
+            "atosantimalware": "[steps('vmManagement').AtosAntimalwaredropdown]",
+            "atosbackup": "[steps('vmManagement').AtosBackupBox]",
+            "atospatchingschedule": "[steps('vmManagement').AtosPatchingBox]"
         }
     }
 }
