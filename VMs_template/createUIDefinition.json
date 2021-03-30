@@ -306,6 +306,7 @@
                                 },
                                 {
                                     "label": "Premium SSD (only for supported VM sizes)",
+                                    "description": "Available only for VMs SKU which supports Premium Disk",
                                     "value": "Premium_LRS"
                                 }
                             ],
