@@ -437,7 +437,7 @@
             "networkResourceGroup": "[steps('VirtualMachineConfig').vnet.resourceGroup]",
             "vnetName": "[steps('VirtualMachineConfig').vnet.name]",
             "subnetName": "[steps('VirtualMachineConfig').vnet.subnets.subnet.name]",
-            "atosmananged": "[steps('VirtualMachineConfig').AtosManageDropdown]",
+            "atosmanaged": "[steps('VirtualMachineConfig').AtosManageDropdown]",
             "atosantimalware": "[steps('VirtualMachineConfig').AtosAntimalwaredropdown]",
             "atosbackup": "[steps('VirtualMachineConfig').AtosBackupBox]",
             "atospatchingschedule": "[steps('VirtualMachineConfig').AtosPatchingBox]"

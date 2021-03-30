@@ -83,10 +83,10 @@
         },
         "atosmanaged": {
             "type": "string",
-            "defaultValue": "true",
+            "defaultValue": "True",
             "allowedValues": [
-                "true",
-                "false"
+                "True",
+                "False"
             ],
             "metadata": {
                 "description": "Specify if the VM is Atos Mananged: true or false"
@@ -94,10 +94,10 @@
         },
         "atosantimalware": {
             "type": "string",
-            "defaultValue": "false",
+            "defaultValue": "False",
             "allowedValues": [
-                "true",
-                "false"
+                "True",
+                "False"
             ],
             "metadata": {
                 "description": "Deploy Antimalware agent on VM: true or false"
