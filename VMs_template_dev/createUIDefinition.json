@@ -361,7 +361,7 @@
                         "name": "AtosManageOptionsGroup",
                         "type": "Microsoft.Common.OptionsGroup",
                         "label": "Atos Managed",
-                        "defaultValue": "True",
+                        "defaultValue": "Yes",
                         "toolTip": "",
                         "constraints": {
                             "allowedValues": [
@@ -379,20 +379,40 @@
                         "visible": true
                     },
                     {
-                        "name": "AtosAntimalwaredropdown",
-                        "type": "Microsoft.Common.DropDown",
+                        "name": "AtosAntimalwareOptionsGroup",
+                        "type": "Microsoft.Common.OptionsGroup",
                         "label": "Atos Antimalware",
-                        "placeholder": "",
-                        "defaultValue": "True",
+                        "defaultValue": "Yes",
                         "toolTip": "",
                         "constraints": {
                             "allowedValues": [
                                 {
-                                    "label": "True",
+                                    "label": "Yes",
                                     "value": "True"
                                 },
                                 {
-                                    "label": "False",
+                                    "label": "No",
+                                    "value": "False"
+                                }
+                            ],
+                            "required": false
+                        },
+                        "visible": "[equals(steps('vmManagement').AtosManageOptionsGroup, 'True')]"
+                    },
+                    {
+                        "name": "AtosComplianceOptionsGroup",
+                        "type": "Microsoft.Common.OptionsGroup",
+                        "label": "Atos Compliance",
+                        "defaultValue": "Yes",
+                        "toolTip": "",
+                        "constraints": {
+                            "allowedValues": [
+                                {
+                                    "label": "Yes",
+                                    "value": "True"
+                                },
+                                {
+                                    "label": "No",
                                     "value": "False"
                                 }
                             ],
@@ -436,7 +456,8 @@
             "vnetName": "[steps('VirtualMachineConfig').vnet.name]",
             "subnetName": "[steps('VirtualMachineConfig').vnet.subnets.subnet.name]",
             "atosmanaged": "[steps('vmManagement').AtosManageOptionsGroup]",
-            "atosantimalware": "[steps('vmManagement').AtosAntimalwaredropdown]",
+            "atosantimalware": "[steps('vmManagement').AtosAntimalwareOptionsGroup]",
+            "atoscompliance": "[steps('vmManagement').AtosComplianceOptionsGroup]",
             "atosbackup": "[steps('vmManagement').AtosBackupBox]",
             "atospatchingschedule": "[steps('vmManagement').AtosPatchingBox]"
         }
