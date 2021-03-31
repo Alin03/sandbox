@@ -432,7 +432,6 @@
             "adminUsername": "[basics('adminUsername')]",
             "adminPassword": "[basics('password')]",
             "osDiskType": "[steps('VirtualMachineConfig').OSdisktype]",
-            "deployPublicIpAddress": "[steps('VirtualMachineConfig').sectionNetworking.PublicIPDropdown]",
             "networkResourceGroup": "[steps('VirtualMachineConfig').vnet.resourceGroup]",
             "vnetName": "[steps('VirtualMachineConfig').vnet.name]",
             "subnetName": "[steps('VirtualMachineConfig').vnet.subnets.subnet.name]",
